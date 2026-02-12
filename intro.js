@@ -1,23 +1,14 @@
 // consola (log, info, warn, error, assert)
 console.log("hola gamers!");
+console.info("Esto es unformación");
+console.warn("Esto es una advertencia");
+console.error("Esto es un error");
 
+//Compara valores
+console.assert(1 == true);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Compara valor y tipo de dato
+console.assert(1 === true);
 
 // variables, constantes
 
