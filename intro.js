@@ -76,9 +76,11 @@ const precio = 55;
 
 
 // funciones tradicionales
+function is_precio() {
+    return precio;
+}
 
-
-
+console.log(is_precio());
 
 
 
