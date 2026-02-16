@@ -69,68 +69,25 @@ const vidas = () => {
 vidas();
 
 
+//------------------------ arreglos
+const videojuegos = ["Minecraft"];
 
+const jugadores = new Array(); 
 
-
-
-
-
-
-
-
-
-
-
-// arreglos
-
-
-//const arreglo = ["Elemento"];
-
-
-//const arreglo = new Array() 
-
-
-//arreglo.push("Otro elemento");
-
-
-//arreglo[10] = "Uno más";
-
+videojuegos.push("Doom");
+videojuegos[10] = "Zelda";
 
 //arreglos asociativos
+videojuegos["nintendo"] = "Mario Bros"
 
-
-//recorrido tradicional del arreglo
-
-
-//for (let i = 0; i < arreglo.length; i++) {
-
-
-//    console.log(arreglo[i]);
-
-
-//}
-
+for (let i = 0; i < videojuegos.length; i++) {
+    console.log(videojuegos[i]);
+}
 
 //recorridos alternativos del arreglo
-
-
-//for(let posicion in arreglo) {
-
-
-//    console.log(posicion);
-
-
-//}
-
-
-
-
-
-
-
-
-
-
+for(let juego in videojuegos) {
+    console.log(juego);
+}
 
 
 
