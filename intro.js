@@ -90,34 +90,16 @@ for(let juego in videojuegos) {
 }
 
 
+//------------------- Objetos
+const objeto = {}; 
+
+const videojuego = {
+    nombre: "Minecraft",
+    genero: "sandbox",
+    plataforma: ["pc", "nintendo", "xbox", "playstation", "mobile"],
+}
+
+console.log(videojuego.nombre);
 
 
-
-
-
-
-//Objetos
-
-
-//const objeto = {} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// modificar html
+//-------------- modificar html
