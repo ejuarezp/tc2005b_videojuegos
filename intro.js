@@ -59,28 +59,14 @@ function is_precio() {
 console.log(is_precio());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // funciones modernas
+() => {}
 
+const vidas = () => {
+    console.log("Te quedan 3 vidas");
+}
 
-
-
-
-
+vidas();
 
 
 
