@@ -19,10 +19,12 @@ for (let item of arreglo) {
 const http = require('http');
 
 const server = http.createServer( (request, response) => {    
-//     console.log(request.url);
+//    console.log(request);
+    console.log(request.url);
+//   console.log(response);
 //     response.setHeader('Content-Type', 'text/html');
 //     response.write("");
-//     response.end();
+    response.end();
 });
 
 server.listen(3000);
