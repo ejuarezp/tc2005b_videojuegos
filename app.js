@@ -22,8 +22,8 @@ const server = http.createServer( (request, response) => {
 //    console.log(request);
     console.log(request.url);
 //   console.log(response);
-//     response.setHeader('Content-Type', 'text/html');
-//     response.write("");
+    response.setHeader('Content-Type', 'text/html');
+    response.write("");
     response.end();
 });
 
