@@ -65,17 +65,22 @@ const html = `
       </div>
     </div>
   </section>
-  <script src="js/comportamientos.js"></script>
+  <!--script src="js/comportamientos.js"></script-->
   </body>
 </html>    
 `;
 
 const server = http.createServer( (request, response) => {    
 
-    console.log(request.url);
-    response.setHeader('Content-Type', 'text/html');
-    response.write(html);
-    response.end();
+    if (request.url == "/") {
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html);
+        response.end();
+    } else if (request.url == "/new") {
+        console.log("Ruta /new");
+    } else {
+        console.log("Error 404");
+    }
 
     // request.on('data', (data) => {
     //   console.log(data);
