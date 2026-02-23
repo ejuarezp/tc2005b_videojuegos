@@ -77,9 +77,13 @@ const server = http.createServer( (request, response) => {
         response.write(html);
         response.end();
     } else if (request.url == "/new") {
-        console.log("Ruta /new");
+        response.setHeader('Content-Type', 'text/html');
+        response.write("Aquí va ir una forma");
+        response.end();
     } else {
-        console.log("Error 404");
+        response.setHeader('Content-Type', 'text/html');
+        response.write("Error 404");
+        response.end();
     }
 
     // request.on('data', (data) => {
