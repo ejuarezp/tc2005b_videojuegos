@@ -1,0 +1,26 @@
+{
+  "name": "tc2005b_videojuegos",
+  "version": "1.0.0",
+  "description": "Proyecto de apoyo a la clase TC2005B",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejuarezp/tc2005b_videojuegos.git"
+  },
+  "keywords": [
+    "node",
+    "videojuegos",
+    "express",
+    "js"
+  ],
+  "author": "Eduardo Juárez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ejuarezp/tc2005b_videojuegos/issues"
+  },
+  "homepage": "https://github.com/ejuarezp/tc2005b_videojuegos#readme"
+}
