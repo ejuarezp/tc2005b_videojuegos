@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ejuarezp/tc2005b_videojuegos/issues"
   },
-  "homepage": "https://github.com/ejuarezp/tc2005b_videojuegos#readme"
+  "homepage": "https://github.com/ejuarezp/tc2005b_videojuegos#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
