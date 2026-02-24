@@ -69,7 +69,12 @@ app.use((request, response, next) => {
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
 
-app.use('/new', (request, response, next) => {
+app.get('/new', (request, response, next) => {
+    response.send(html_header + html_form + html_footer);
+});
+
+app.post('/new', (request, response, next) => {
+    videojuegos.push(request.body);
     response.send(html_header + html_form + html_footer);
 });
 
