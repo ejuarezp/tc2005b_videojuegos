@@ -3,10 +3,6 @@ const router = express.Router();
 
 const path = require('path');
 
-const html_header = ``;
-
-const html_footer = ``;
-
 const videojuegos = [
   {
     nombre: "Minecraft",
@@ -38,55 +34,7 @@ router.get('/old', (request, response, next) => {
 });
 
 router.use((request, response, next) => {
-    console.log('Otro middleware!');
-    let html_index = `
-              <a href="/videojuegos/new"><button class="button is-primary">Nuevo videojuego</button></a>
-              <div class="columns">`;
-
-        for (let juego of videojuegos) {
-            html_index += `
-                <div class="column">
-                    ${juego.nombre}
-                    <figure class="image">
-                        <img class="is-rounded" src="${juego.imagen}" />
-                    </figure>
-                </div>`;
-        }
-        
-        html_index += `    
-              </div>
-            </div>
-          </section>
-          <section class="section">
-            <div class="container">
-              <div class="columns">
-                <div class="column">
-                  <h1 class="title">Comandos de git</h1>
-                  <ul>
-                    <li>git add: Sirve para agregar cambios a la transacción.</li>
-                    <li>
-                      git commit -m "mensaje en imperativo": Sirve para comprometer 
-                      la transacción, es decir, guardar los cambios.
-                    </li>
-                    <li>git checkout <strong>[nombre_rama]</strong>: Sirve para cambiarse de rama.</li>
-                    <li>
-                      git checkout -b [nombre_rama]: Sirve para crear una nueva rama y 
-                      cambiarse a esa nueva rama.
-                    </li>
-                    <li>
-                      git push: Sirve para sincronizar los cambios desde mi repositorio 
-                      hacia el repositorio remoto.
-                    </li>
-                    <li>
-                      git pull: Sirve para sincronizar los cambios del repositorio remoto 
-                      hacia mi repositorio.
-                    </li>
-                  </ul>
-                </div>
-              </div>  
-          `;
-
-    response.send(html_header + html_index + html_footer); //Manda la respuesta
+    response.render('list', {videojuegos: videojuegos}); //Manda la respuesta
 });
 
 module.exports = router;
