@@ -17,6 +17,8 @@ app.use(session({
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
+const rutasUsuarios = require('./routes/users.routes');
+app.use('/users', rutasUsuarios);
 const rutasVideojuegos = require('./routes/videojuegos.routes');
 app.use('/videojuegos', rutasVideojuegos);
 
