@@ -14,7 +14,7 @@ exports.post_new = (request, response, next) => {
         return response.redirect('/videojuegos');
     }).catch((error) => {
         console.log(error);
-        throw error;
+        next(error);
     });
 };
 
@@ -31,7 +31,7 @@ exports.get_list = (request, response, next) => {
         });
     }).catch((error) => {
         console.log(error);
-        throw error;
+        next(error);
     });
     
 };
