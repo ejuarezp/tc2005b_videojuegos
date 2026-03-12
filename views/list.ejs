@@ -15,6 +15,12 @@
                     <figure class="image">
                         <img class="is-rounded" src="<%= juego.imagen %>" />
                     </figure>
+                    <% for (let privilegio of privilegios) { %>
+                      <% if (privilegio.privilegio == 'crear_videojuegos') { %>
+                        <br>
+                        <a href="/videojuegos/<%= juego.id %>/edit" class="button is-primary">Editar</a>
+                      <% } %>
+                    <% } %>
                 </div>
         <% } %>
            
