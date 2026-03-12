@@ -50,7 +50,7 @@ exports.get_list = (request, response, next) => {
 exports.get_edit = (request, response, next) => {
     Videojuego.getTipos().then(([tipos, fieldData]) => {
         Videojuego.fetchOne(request.params.videojuego_id).then(([videojuegos, fieldData]) => {
-
+            
             return response.render('new', {
                 editar: true,
                 videojuego: videojuegos[0],
