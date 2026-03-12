@@ -15,7 +15,13 @@
     <div class="select">
       <select id="tipo" name="tipo">
         <% for (let tipo of tipos) { %>
-          <option value="<%= tipo.id %>"><%= tipo.nombre %></option>
+          <option value="<%= tipo.id %>"
+            <% if(editar) { %>
+              <% if (videojuego.tipo == tipo.nombre) { %>
+                selected
+              <% } %>
+            <% } %>
+          ><%= tipo.nombre %></option>
         <% } %>
       </select>
     </div>
