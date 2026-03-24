@@ -67,7 +67,15 @@
 <script>
   const buscar = document.getElementById("buscar");
   buscar.onkeyup = () => {
-    console.log("on key up");
+    fetch(`/videojuegos/buscar/${buscar.value}`,{
+      method: 'GET',
+    }).then((result) => {
+      return result.json(); 
+    }).then((data) => {
+      console.log(data); 
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 </script>
 
